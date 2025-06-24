@@ -7,6 +7,10 @@ export default defineNuxtConfig({
 	modules: ["@pinia/nuxt"],
 
 	runtimeConfig: {
+		public: {
+			apiBaseUrl:
+				process.env.VITE_API_BASE_URL || "http://localhost:8080",
+		},
 		telegramToken: process.env.TELEGRAM_TOKEN,
 		telegramChatId: process.env.TELEGRAM_CHAT_ID,
 		googleSheetId: process.env.GOOGLE_SHEET_ID,

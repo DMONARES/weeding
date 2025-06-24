@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+const config = useRuntimeConfig();
+const BASE_URL = config.public.apiBaseUrl;
 
 export default {
   login: `${BASE_URL}/login`,
